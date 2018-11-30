@@ -123,7 +123,7 @@ mykeyboardlayout = awful.widget.keyboardlayout()
 mytextclock = wibox.widget.textclock()
 
 local myseparator = wibox.widget.textbox()
-myseparator.text = " | "
+myseparator.text = ""
 
 -- icons
 
