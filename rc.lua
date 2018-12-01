@@ -131,7 +131,7 @@ local batimg = wibox.widget.imagebox();
 batimg.image = "/home/lampros/.config/awesome/zhongguo/icons/bat.png"
 
 local mycpuwidget = wibox.widget.textbox()
-vicious.register(mycpuwidget, vicious.widgets.cpu, ' <span color="#FFEB00">$1% $2% $3% $4%</span>')
+vicious.register(mycpuwidget, vicious.widgets.cpu, '<span color="#FFEB00" bgcolor="#00DC6E"></span><span color="#333333" bgcolor="#FFEB00"> $1% $2% $3% $4%</span>')
 
 -- Create a daemon
 local mymemwidget = wibox.widget.textbox()
@@ -140,7 +140,7 @@ vicious.register(mymemwidget, vicious.widgets.mem, ' <span color="#FF663F">$2MB/
 -- Network usage widget
 local mynetwidget = wibox.widget.textbox()
 -- Register widget
-vicious.register(mynetwidget, vicious.widgets.net, ' v<span color="#FF0066">${wlp3s0 down_kb}kb</span> ^<span color="#00DC6E">${wlp3s0 up_kb}kb</span>', 3)
+vicious.register(mynetwidget, vicious.widgets.net, '<span color="#333333" bgcolor="#FF0066"> ▼ ${wlp3s0 down_kb}kb</span><span color="#00DC6E" bgcolor="#FF0066"></span><span color="#333333" bgcolor="#00DC6E"> ▲ ${wlp3s0 up_kb}kb </span>', 3)
 
 -- Keyboard map indicator and changer
 local kbdcfg = {}
@@ -262,7 +262,6 @@ awful.screen.connect_for_each_screen(function(s)
             mykeyboardlayout,
             myseparator,
             mynetwidget,
-            myseparator,
             mycpuwidget,
             myseparator,
             mymemwidget,
