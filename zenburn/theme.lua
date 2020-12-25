@@ -6,7 +6,7 @@ local awful = require("awful");
 
 -- {{{ Main
 local theme = {}
-theme.wallpaper = awful.util.get_configuration_dir() .. "lambros.jpg"
+theme.wallpaper = awful.util.get_configuration_dir() .. "wallpaper.jpg"
 -- }}}
 
 -- {{{ Styles
